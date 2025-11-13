@@ -1,35 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect } from "react";
+import { useAuth } from "./contexts/authcontext";
+import Register from "./components/register";
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+  const {user, isAuthLoading} = useAuth();
+
+  // Test log to confirm component mount
+  useEffect(() => {
+    console.log("✅ App mounted");
+  }, []);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div style={{padding: '20px'}}>
+      <h2 style={{color: 'green'}}>✅ App Loaded Successfully</h2>
+      <h1>Full Stack LMS Project</h1>
+      <hr />
 
-export default App
+      <h2>Current Status:</h2>
+      {isAuthLoading ? (
+        <p>Checking Login Status...</p>
+      ) : user ? (
+        <p>Welcome, {user.username}! You are logged in.</p>
+      ) : (
+        <p>You are not logged in.</p>
+      )}
+      <hr />
+      {!user && <Register/>}
+    </div>
+  );
+}
