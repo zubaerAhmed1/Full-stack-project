@@ -61,12 +61,19 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+  const logout = () => {
+    localStorage.removeItem('token')
+    localStorage.removeItem('refresh')
+    setUser(null);
+    }
+
   const value = {
     user,
     isAuthLoading,
     register,
     login,
     Error,
+    logout,
   };
 
   return (

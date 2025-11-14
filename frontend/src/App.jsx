@@ -4,7 +4,7 @@ import Register from "./components/register";
 import Login from "./components/login";
 
 export default function App() {
-  const {user, isAuthLoading} = useAuth();
+  const {user, isAuthLoading,logout} = useAuth();
 
   
 
@@ -17,16 +17,22 @@ export default function App() {
       <h2>Current Status:</h2>
       {isAuthLoading ? (
         <p>Checking Login Status...</p>
-      ) : user ? (
+      ) : user ? (  <>
         <p>Welcome, {user.username}! You are logged in.</p>
+        <hr />
+        <div>
+          <button type="submit" onClick={logout} style={{padding:10, border:"1px solid green", backgroundColor: "green"}}>Log Out</button>
+        </div> </>
       ) : (
         <p>You are not logged in.</p>
-      )}
+      )
+    }
       <hr />
       {!user && <Register/>}
 
       <hr />
       {!user && <Login/>}
+      
     </div>
   );
 }
