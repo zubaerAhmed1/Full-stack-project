@@ -6,6 +6,7 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [isAuthLoading, setIsAuthLoading] = useState(true);
+  const [Error,setError] = useState(null);
 
   useEffect(() => {
     const initUser = async () => {
@@ -55,7 +56,7 @@ export const AuthProvider = ({ children }) => {
       return response;
 
     } catch (error) {
-      // setError(error.message || 'Login failed'); // এরর state-এ সেট করা যেতে পারে।
+      setError(error.message || 'Login failed');
       throw error;
     }
   };
@@ -65,6 +66,7 @@ export const AuthProvider = ({ children }) => {
     isAuthLoading,
     register,
     login,
+    Error,
   };
 
   return (

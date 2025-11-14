@@ -1,0 +1,18 @@
+# My custom folder
+backend-my/
+
+# Python virtual environment
+venv/
+
+# Node.js dependencies
+node_modules/
+
+# Editor/IDE specific
+.vscode/
+.idea/
+
+# Log files
+*.log
+npm-debug.log*
+yarn-error.log*
+

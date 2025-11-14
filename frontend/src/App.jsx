@@ -1,14 +1,12 @@
 import { useEffect } from "react";
 import { useAuth } from "./contexts/authcontext";
 import Register from "./components/register";
+import Login from "./components/login";
 
 export default function App() {
   const {user, isAuthLoading} = useAuth();
 
-  // Test log to confirm component mount
-  useEffect(() => {
-    console.log("✅ App mounted");
-  }, []);
+  
 
   return (
     <div style={{padding: '20px'}}>
@@ -26,6 +24,9 @@ export default function App() {
       )}
       <hr />
       {!user && <Register/>}
+
+      <hr />
+      {!user && <Login/>}
     </div>
   );
 }
