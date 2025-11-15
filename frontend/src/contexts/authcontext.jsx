@@ -10,11 +10,12 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     const initUser = async () => {
+      setIsAuthLoading(true)
       try {
         const token = localStorage.getItem('token'); 
         
         if (token) {
-          const userData = await authService.getCurrentUser();
+          const userData = await authService.getCurrentUser(token);
           setUser(userData); 
         }
       } catch (error) {

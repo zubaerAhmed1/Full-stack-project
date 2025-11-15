@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useAuth } from "./contexts/authcontext";
 import Register from "./components/register";
 import Login from "./components/login";

@@ -46,19 +46,29 @@ export const authService = {
                 password:userData.password,
             });
         } 
-        // ei error niye proshno ache,ami error er bishoyta puropuri bujhini.
+        
         catch(error) {
             const errorMessage = error.response?.data?.error || 
                           Object.values(error.response?.data || {}).flat().join(', ') ||
                           'Registration failed';
             throw new Error(errorMessage)
         }
+    },
+
+    
+   async getCurrentUser(token) {
+
+    try{
+       const response = await api.get('/protected/',{
+        headers:{
+            Authorization: `Bearer ${token}` } })
+        return response.data.user    
+    
+    } catch(error){
+        throw new Error('Failed to get User info.')
     }
 
-    ,
-   async getCurrentUser() {
-       return null 
-    }
+ }
 }
 
 export default api;
