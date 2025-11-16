@@ -1,0 +1,157 @@
+{
+  "version": "6.0",
+  "nxVersion": "19.1.2",
+  "deps": {
+    "axios": "^1.12.2",
+    "react-router-dom": "^7.9.6",
+    "vconsole": "^3.15.1",
+    "nx": "22.0.2"
+  },
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "projectFileMap": {},
+    "nonProjectFiles": [
+      {
+        "file": ".dockerignore",
+        "hash": "3132506876310710150"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "5393359180509958135"
+      },
+      {
+        "file": ".nx/workspace-data/file-map.json",
+        "hash": "3865415446891802972"
+      },
+      {
+        "file": ".nx/workspace-data/lockfile-dependencies.hash",
+        "hash": "2397263936634074947"
+      },
+      {
+        "file": ".nx/workspace-data/lockfile-nodes.hash",
+        "hash": "2397263936634074947"
+      },
+      {
+        "file": ".nx/workspace-data/nx_files.nxt",
+        "hash": "5711435411232168341"
+      },
+      {
+        "file": ".nx/workspace-data/parsed-lock-file.dependencies.json",
+        "hash": "14417632224278887061"
+      },
+      {
+        "file": ".nx/workspace-data/parsed-lock-file.nodes.json",
+        "hash": "777590623143013205"
+      },
+      {
+        "file": ".nx/workspace-data/project-graph.json",
+        "hash": "1865422072323741080"
+      },
+      {
+        "file": ".nx/workspace-data/project-graph.lock",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": ".nx/workspace-data/source-maps.json",
+        "hash": "1389868326933519382"
+      },
+      {
+        "file": "Dockerfile",
+        "hash": "10116639036424548237"
+      },
+      {
+        "file": "README.md",
+        "hash": "7333766241197130131"
+      },
+      {
+        "file": "frontend/.gitignore",
+        "hash": "11449789718521400830"
+      },
+      {
+        "file": "frontend/README.md",
+        "hash": "1363755651240706393"
+      },
+      {
+        "file": "frontend/eslint.config.js",
+        "hash": "500521933105150228"
+      },
+      {
+        "file": "frontend/index.html",
+        "hash": "2203077389937240776"
+      },
+      {
+        "file": "frontend/package-lock.json",
+        "hash": "15422578797455465220"
+      },
+      {
+        "file": "frontend/package.json",
+        "hash": "865401556278700409"
+      },
+      {
+        "file": "frontend/public/vite.svg",
+        "hash": "16046085400642193116"
+      },
+      {
+        "file": "frontend/src/App.css",
+        "hash": "3739391659270974612"
+      },
+      {
+        "file": "frontend/src/App.jsx",
+        "hash": "9249261462198170220"
+      },
+      {
+        "file": "frontend/src/assets/react.svg",
+        "hash": "16069471864800376455"
+      },
+      {
+        "file": "frontend/src/components/ErrorBoundary.jsx",
+        "hash": "13746012221416872489"
+      },
+      {
+        "file": "frontend/src/components/login.jsx",
+        "hash": "12261527264852198187"
+      },
+      {
+        "file": "frontend/src/components/register.jsx",
+        "hash": "5550917477520767084"
+      },
+      {
+        "file": "frontend/src/contexts/authcontext.jsx",
+        "hash": "434019913110809232"
+      },
+      {
+        "file": "frontend/src/index.css",
+        "hash": "13504153635654440336"
+      },
+      {
+        "file": "frontend/src/main.jsx",
+        "hash": "10903375448204654528"
+      },
+      {
+        "file": "frontend/src/services/authservice.js",
+        "hash": "3938343977834551005"
+      },
+      {
+        "file": "frontend/src/utils/ConsoleOverlay.js",
+        "hash": "12805706002066060050"
+      },
+      {
+        "file": "frontend/vite.config.js",
+        "hash": "16225914092815047172"
+      },
+      {
+        "file": "nx.json",
+        "hash": "18336426213955174907"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "16965798259372064356"
+      },
+      {
+        "file": "package.json",
+        "hash": "17419580098337425139"
+      }
+    ]
+  }
+}
