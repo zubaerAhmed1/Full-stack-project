@@ -3,7 +3,7 @@ import { authService } from '../services/authservice';
 
 const AuthContext = createContext();
 
-export const AuthProvider = ({ children }) => {
+export function AuthProvider ({ children }) {
   const [user, setUser] = useState(null);
   const [isAuthLoading, setIsAuthLoading] = useState(true);
   const [Error,setError] = useState(null);
@@ -13,7 +13,7 @@ export const AuthProvider = ({ children }) => {
       setIsAuthLoading(true)
       try {
         const token = localStorage.getItem('token'); 
-        
+        o
         if (token) {
           const userData = await authService.getCurrentUser(token);
           setUser(userData); 
