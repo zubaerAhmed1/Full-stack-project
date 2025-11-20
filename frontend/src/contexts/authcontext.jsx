@@ -8,27 +8,28 @@ export function AuthProvider ({ children }) {
   const [isAuthLoading, setIsAuthLoading] = useState(true);
   const [Error,setError] = useState(null);
 
+  // অ্যাপ লোড হওয়ার সময় ব্যবহারকারীর তথ্য যাচাই করার জন্য
   useEffect(() => {
     const initUser = async () => {
       setIsAuthLoading(true)
       try {
         const token = localStorage.getItem('token'); 
-        o
+        
         if (token) {
           const userData = await authService.getCurrentUser(token);
           setUser(userData); 
         }
       } catch (error) {
         console.error("initUser error:", error);
-        setUser(null); 
+        setUser(null);
       } finally {
-        setIsAuthLoading(false); 
+        setIsAuthLoading(false);
       }
     };
 
-    initUser(); 
+    initUser();
 
-  }, []); 
+  }, []);
 
   const register = async (userData) => {
     try{

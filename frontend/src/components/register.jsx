@@ -20,7 +20,7 @@ const handlesubmit = async (e) => {
 
         alert('Registration Successfull!');
     }   catch(error) {
-      alert('Registration Faild!',+ error.message)}
+      alert('Registration Faild!'+ error.message)}
 };
 
 return(

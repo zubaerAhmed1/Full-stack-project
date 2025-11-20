@@ -1,22 +1,24 @@
-import VConsole from "vconsole";
-new VConsole();
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import VConsole from 'vconsole';
 
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import { BrowserRouter } from 'react-router-dom'
-import { AuthProvider } from './contexts/authcontext'
-import ErrorBoundary from "./components/ErrorBoundary.jsx";
+import App from './App.jsx';
+import { AuthProvider } from './contexts/authcontext.jsx';
+import ErrorBoundary from './components/ErrorBoundary.jsx';
+
+if (import.meta.env.DEV) {
+  new VConsole();
+}
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  
   <React.StrictMode>
     <ErrorBoundary>
-    <AuthProvider>
       <BrowserRouter>
-        <App />
+        <AuthProvider>
+          <App />
+        </AuthProvider>
       </BrowserRouter>
-    </AuthProvider>
     </ErrorBoundary>
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+);
