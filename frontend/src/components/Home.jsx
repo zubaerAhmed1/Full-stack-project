@@ -18,7 +18,7 @@ export default function Home() {
           <button onClick={logout}>Logout</button>
         </>
       ) : (
-        <p>You are not logged in. Please login or register.</p>
+        <p>You are not logged in. Please login or register. </p>
       )}
     </div>
   );

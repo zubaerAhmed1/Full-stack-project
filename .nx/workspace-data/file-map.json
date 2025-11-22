@@ -3,8 +3,17 @@
   "nxVersion": "19.8.14",
   "deps": {
     "axios": "^1.12.2",
-    "react-router-dom": "^7.9.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.23.1",
     "vconsole": "^3.15.1",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
     "nx": "^19.1.2"
   },
   "pathMappings": {},
@@ -12,10 +21,6 @@
   "fileMap": {
     "projectFileMap": {},
     "nonProjectFiles": [
-      {
-        "file": ".dockerignore",
-        "hash": "3132506876310710150"
-      },
       {
         "file": ".gitignore",
         "hash": "5393359180509958135"
@@ -42,15 +47,15 @@
       },
       {
         "file": "frontend/index.html",
-        "hash": "2203077389937240776"
+        "hash": "6083536154652836828"
       },
       {
         "file": "frontend/package-lock.json",
-        "hash": "2955978975236082193"
+        "hash": "2044111256680757143"
       },
       {
         "file": "frontend/package.json",
-        "hash": "865401556278700409"
+        "hash": "4085813215359572436"
       },
       {
         "file": "frontend/public/vite.svg",
@@ -62,7 +67,7 @@
       },
       {
         "file": "frontend/src/App.jsx",
-        "hash": "6947963259440076445"
+        "hash": "16344631803704631469"
       },
       {
         "file": "frontend/src/assets/react.svg",
@@ -78,7 +83,7 @@
       },
       {
         "file": "frontend/src/components/Navbar.jsx",
-        "hash": "9606962629753751369"
+        "hash": "4228977791568502313"
       },
       {
         "file": "frontend/src/components/login.jsx",
@@ -86,11 +91,11 @@
       },
       {
         "file": "frontend/src/components/register.jsx",
-        "hash": "13648886157267032445"
+        "hash": "8552597735257466771"
       },
       {
         "file": "frontend/src/contexts/authcontext.jsx",
-        "hash": "434019913110809232"
+        "hash": "2593821610416132630"
       },
       {
         "file": "frontend/src/index.css",
@@ -98,7 +103,7 @@
       },
       {
         "file": "frontend/src/main.jsx",
-        "hash": "737034819189199923"
+        "hash": "14892942681042255953"
       },
       {
         "file": "frontend/src/services/authservice.js",
@@ -118,7 +123,11 @@
       },
       {
         "file": "package.json",
-        "hash": "15367710596510403130"
+        "hash": "6039981930100041075"
+      },
+      {
+        "file": "vite.config.js",
+        "hash": "17088076483816961404"
       }
     ]
   }

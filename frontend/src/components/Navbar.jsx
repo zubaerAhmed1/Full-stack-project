@@ -8,7 +8,11 @@ export default function Navbar() {
     return(
         <nav>
         {user ? (
+            <>
             <button type="submit" onClick={logout}>Log Out</button>
+            <br />
+            <Link to='/dashboard'>Dashboard</Link>
+            </>
         ) : (
         <>
         <Link to='/login'>Login</Link>

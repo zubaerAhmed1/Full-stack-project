@@ -1,5 +1,5 @@
 import axios from 'axios';
-const API_BASE_URL = 'https://ominous-yodel-rw6vgp6wgpr24pp-8000.app.github.dev/api';
+const API_BASE_URL = 'https://glorious-dollop-r4q4q4x4x4j63596-8000.app.github.dev/api';
 const api = axios.create({
     baseURL: API_BASE_URL,
     headers:{
@@ -62,9 +62,13 @@ export const authService = {
        const response = await api.get('/protected/',{
         headers:{
             Authorization: `Bearer ${token}` } })
+
+        console.log("👉 Server Response:", response);
+        console.log("👉 Returning:", response.data.user);
         return response.data.user    
     
     } catch(error){
+        console.error("❌ Original Error inside authService:", error);
         throw new Error('Failed to get User info.')
     }
 
