@@ -12,6 +12,8 @@ export default function Navbar() {
             <button type="submit" onClick={logout}>Log Out</button>
             <br />
             <Link to='/dashboard'>Dashboard</Link>
+            <br />
+            <Link to='/teacher/'>Teachers Profile</Link>
             </>
         ) : (
         <>
