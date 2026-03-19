@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Dashboard from "./components/Dashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Teachers from "./components/Teachers";
+import UserProfile from "./components/UserProfile";
 
 function App (){
   return(
@@ -17,6 +18,7 @@ function App (){
       <Route path="/login" element={<Login />}/>
       <Route path="/dashboard" element={<ProtectedRoute><Dashboard/></ProtectedRoute>}/>
       <Route path="/teacher" element={<ProtectedRoute> <Teachers/> </ProtectedRoute>}/>
+      <Route path="/profile" element={<ProtectedRoute><UserProfile/></ProtectedRoute>}/>
     </Routes>
     </> 
   );

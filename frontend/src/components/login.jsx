@@ -24,13 +24,15 @@ export default function Login() {
 
 
 return(
-    <form onSubmit={loginhandle} style={{padding:5,border:"ipx solid green"}}>
+    <form onSubmit={loginhandle} style={{padding:5,border:"1px solid green"}}>
         <h3>Login</h3>
 
         <div style={{padding:5,backgroundColor:"blue"}}>
-            <input type="phone" name="phone" placeholder="Enter Your Phone Number" /> <br /><br />
-            <input type="password" name="password" placeholder="Type Your Password" /><br /><br />
-            <button type="submit">Click To Login!</button>
+            <label htmlFor="login-phone">Phone Number</label><br />
+            <input id="login-phone" type="tel" name="phone" placeholder="Enter Your Phone Number" aria-required="true" required /><br /><br />
+            <label htmlFor="login-password">Password</label><br />
+            <input id="login-password" type="password" name="password" placeholder="Type Your Password" aria-required="true" required /><br /><br />
+            <button type="submit">Log In</button>
         </div>
     </form>
 )
