@@ -58,40 +58,49 @@ export const Teachers = () => {
                     Add New Instructor
                 </h3>
 
-                <form onSubmit={handleAddteacher} className="grid grid-cols-1 md:grid-cols-4 gap-4">
-                    
-                    <input type="text" name="name" placeholder="Your Name" required className="w-full p-3 border border-gray-200 rounded-lg  
+                <form onSubmit={handleAddteacher} className="grid grid-cols-1 md:grid-cols-4 gap-4" aria-label="Add new instructor">
+                    <div className="flex flex-col gap-1">
+                        <label htmlFor="teacher-name" className="text-sm font-medium text-gray-600">Name</label>
+                        <input id="teacher-name" type="text" name="name" placeholder="Instructor Name" aria-required="true" required className="w-full p-3 border border-gray-200 rounded-lg  
                     focus:outline-none focus:ring-2 focus:ring-blue-400  transition"/>
+                    </div>
 
-                    <input
-                        name="subject"
-                        placeholder="Subject / Expertise"
-                        required
-                        className="w-full p-3 border border-gray-200 rounded-lg 
-                                   focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
-                    />
+                    <div className="flex flex-col gap-1">
+                        <label htmlFor="teacher-subject" className="text-sm font-medium text-gray-600">Subject / Expertise</label>
+                        <input
+                            id="teacher-subject"
+                            name="subject"
+                            placeholder="Subject / Expertise"
+                            aria-required="true"
+                            required
+                            className="w-full p-3 border border-gray-200 rounded-lg 
+                                       focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+                        />
+                    </div>
 
-                    <input type="email" name="email" placeholder="Your Email" required className="w-full p-3 border border-gray-200 rounded-lg
+                    <div className="flex flex-col gap-1">
+                        <label htmlFor="teacher-email" className="text-sm font-medium text-gray-600">Email</label>
+                        <input id="teacher-email" type="email" name="email" placeholder="instructor@example.com" aria-required="true" required className="w-full p-3 border border-gray-200 rounded-lg
                     focus:outline-none focus:ring-2 focus:ring-blue-400 transition" />
+                    </div>
 
-                    <button type="submit" className="w-full p-3 bg-blue-500 text-white round-lg font-semibold
-                    hover:bg-blue-600 active:scale-95 transition transform">
-                        + Add Teacher
-
+                    <button type="submit" className="w-full p-3 bg-blue-500 text-white rounded-lg font-semibold
+                    hover:bg-blue-600 active:scale-95 transition transform self-end">
+                        + Add Instructor
                     </button>
 
                 </form>
             </div>
 
             {error && (
-                <div className="bg-red-50 text-red-600 p-4 rounded-lg text-center border border-red-100"> 
+                <div role="alert" aria-live="assertive" className="bg-red-50 text-red-600 p-4 rounded-lg text-center border border-red-100"> 
                 {error}
                 </div>
 
             )}
 
             { isloading ?(
-                <div className="text-center py-10 text-gray-500 text-lg animate-pulse">
+                <div role="status" aria-live="polite" className="text-center py-10 text-gray-500 text-lg animate-pulse">
                     Loading teachers data...
                 </div>
             ): (

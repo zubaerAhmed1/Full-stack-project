@@ -14,6 +14,8 @@ export default function Navbar() {
             <Link to='/dashboard'>Dashboard</Link>
             <br />
             <Link to='/teacher/'>Teachers Profile</Link>
+            <br />
+            <Link to='/profile'>My Profile</Link>
             </>
         ) : (
         <>

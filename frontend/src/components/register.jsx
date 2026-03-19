@@ -25,13 +25,18 @@ const handlesubmit = async (e) => {
 
 return(
     <form onSubmit={handlesubmit} style={{padding:20,border: "1px solid green"}}>
-        <h3>register</h3>
+        <h3>Register</h3>
 
-        <input type="text" name='first_name' placeholder='First Name' required /> <br />
-        <input type="text" name='last_name' placeholder='Last Name' required /> <br />
-        <input type="text" name='username' placeholder='User Name' required /> <br />
-        <input type="number" name='phone' placeholder='Phone' required /> <br />
-        <input type="password" name='password' placeholder='Password' required/> <br /><br />
+        <label htmlFor="reg-first-name">First Name</label><br />
+        <input id="reg-first-name" type="text" name='first_name' placeholder='First Name' aria-required="true" required /> <br />
+        <label htmlFor="reg-last-name">Last Name</label><br />
+        <input id="reg-last-name" type="text" name='last_name' placeholder='Last Name' aria-required="true" required /> <br />
+        <label htmlFor="reg-username">Username</label><br />
+        <input id="reg-username" type="text" name='username' placeholder='User Name' aria-required="true" required /> <br />
+        <label htmlFor="reg-phone">Phone</label><br />
+        <input id="reg-phone" type="tel" name='phone' placeholder='Phone' aria-required="true" required /> <br />
+        <label htmlFor="reg-password">Password</label><br />
+        <input id="reg-password" type="password" name='password' placeholder='Password' aria-required="true" required/> <br /><br />
 
         <button type="submit">Register Now</button>
     </form>
